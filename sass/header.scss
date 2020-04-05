@@ -1,0 +1,121 @@
+
+// --- HEADER ---
+.header {
+  position: relative;
+  background-color: #fff;
+  height: 4rem;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  width: 100%;
+
+  &__wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      color: inherit;
+      font-size: 2.5rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    height: 3rem;
+    margin-right: 3rem;
+  }
+
+  &__hamburger {
+    display: none;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 2.6rem;
+      height: 0.2rem;
+      background-color: currentColor;
+      border-radius: 0.15rem;
+      position: absolute;
+      top: 50%;
+      transition-property: transform;
+      margin-top: -0.1rem;
+      transition-duration: 75ms;
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    span::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -0.7rem;
+      transition: top 75ms 0.12s ease, opacity 75ms ease;
+      height: 100%;
+      width: 100%;
+      background-color: inherit;
+    }
+
+    span::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -0.7rem;
+      transition: bottom 75ms 0.12s ease,
+        transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      height: 100%;
+      width: 100%;
+      background-color: inherit;
+    }
+  }
+  &__profile-box{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-self: space-between;
+  }
+  &__cta{
+    margin-right: 3rem;
+  }
+  &__profile{
+    height: 100%;
+    width: 3rem;
+    border-radius: 100px;
+    // margin-left: auto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    img{
+      width: 100%;
+      object-fit: cover;
+      border-radius: 100px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  &__link {
+    display: block;
+    margin-left: 5rem;
+    padding: 0.5rem 0;
+    line-height: 1;
+    color: inherit;
+    box-shadow: 0 2px 0 transparent;
+  }
+
+  &__link:hover {
+    box-shadow: 0 2px 0 #dddfe5;
+  }
+  &__link.active {
+    color: #334ac0;
+    box-shadow: 0 2px 0 currentColor;
+  }
+}

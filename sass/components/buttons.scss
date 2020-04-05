@@ -1,0 +1,24 @@
+.button{
+    font-size: 1.2rem;
+    line-height: 1;
+    padding: .75em 1.6em .7em;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: .6rem;
+    color: #fff;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: box-shadow 120ms,background-color 120ms;
+    box-shadow: 0 0.1rem 0.1rem transparent;
+    text-align: center;
+}
+
+.button.button--light{
+    background-color: #fff;
+    color: var(--main-color);
+    box-shadow: 0 0.2rem 0.5rem rgba(103,110,144,.2), 0 0 0 0.1rem rgba(103,110,144,.05);
+}
+
+.button.button--light:hover{
+    box-shadow: 0 0.2rem 0.5rem rgba(103,110,144,.4), 0 0 0 0.1rem rgba(103,110,144,.05);
+}

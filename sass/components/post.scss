@@ -1,0 +1,97 @@
+.all-post {
+  width: 100%;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+
+  &__buttons {
+    width: 15%;
+    margin-left: auto;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+
+    button {
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+  }
+}
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 3rem;
+  &__group {
+    overflow-y: scroll;
+    max-height: 50rem;
+    height: 100%;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.post {
+  width: 100%;
+  border: thin solid var(--post-border);
+  display: flex;
+  align-items: center;
+
+  &:first-child {
+    border-radius: 4px 4px 0 0;
+  }
+  &:last-child {
+    border-radius: 0 0 4px 4px;
+  }
+  &__vote {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    width: 40px;
+    height: 100%;
+    padding: 0 1rem;
+
+    button {
+      cursor: pointer;
+      font-size: 2rem;
+    }
+  }
+
+  &__vote-calc {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__icon {
+    padding: 2rem;;
+    i {
+      font-size: 3.5rem;
+      color: var(--main-color);
+    }
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &__tag {
+    color: #1c1c1c;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-right: 1rem;
+  }
+
+  &__writer {
+    color: rgb(120, 124, 126);
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

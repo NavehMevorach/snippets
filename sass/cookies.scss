@@ -1,0 +1,81 @@
+// Cookies
+.cookies-wrapper {
+    backdrop-filter: blur(1rem);
+    background-color: rgba(43, 42, 53, 0.9);
+    padding: 1em;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10000;
+  }
+  
+  .cookies {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    max-width: 80rem;
+    padding: 1.5rem;
+    text-align: center;
+    color: #fff;
+    &__message {
+      margin: 1.25rem 0.5rem 1.75rem 0.5rem;
+  
+      a {
+        text-decoration: underline;
+        color: inherit;
+      }
+    }
+  
+    &__agree {
+      background-origin: border-box;
+      border: 0.2rem solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0.6rem 1.6rem rgba(43, 42, 53, 0.6);
+      padding: 0.75em 1.8em 0.7em 2em;
+      color: #334ac0;
+      background-color: #fff;
+      outline: 0;
+  
+      span {
+        animation-name: call-me-hand;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        display: inline-block;
+        line-height: 2em;
+        margin: -1em 0 -1em 0.25em;
+        transform-origin: 0 70%;
+      }
+    }
+  
+    &__close {
+      border: 0;
+      flex-shrink: 0;
+      height: 1em;
+      margin-left: 1rem;
+      position: absolute;
+      right: 1em;
+      top: 1em;
+      width: 1em;
+      cursor: pointer;
+    }
+  }
+  
+  .cookies-accept {
+    font-size: 1.6rem;
+    line-height: 1;
+    padding: 0.75em 1.6em 0.7em;
+    background-color: #334ac0;
+    border: none;
+    border-radius: 0.6rem;
+    color: #fff;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: box-shadow 120ms, background-color 120ms;
+    box-shadow: 0 0.1rem 0.1rem transparent;
+    text-align: center;
+  }
+  
